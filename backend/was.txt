@@ -1,8 +1,0 @@
-# 3️⃣ Build Gemini Prompt
-    prompt = (
-        "You are an assistant that answers ONLY using the AIDTM Student Handbook.\n"
-        "Do not guess. Use only this context.\n\n"
-        f"Context:\n{context}\n\n"
-        f"Question: {query}\n\n"
-        "Answer clearly using only the above handbook content."
-    )
