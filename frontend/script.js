@@ -1,5 +1,6 @@
 // === CONFIG ===
         const API_URL = "https://gita-backend.onrender.com/chat";
+        
         const WELCOME_TEXT = "Namaste. I am your Bhagavad Gita Guide. Ask anything, and I will help you understand it.";
 
         // === DOM ===
