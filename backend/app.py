@@ -101,28 +101,7 @@ def build_index():
         docs = docs_cache
         index = index_cache
         print("🔥 Loaded embeddings from disk")
-        return
-
-    # 2️⃣ Build new index from PDF
-    PDF_FILE = "Bhagavad-gita-Swami-BG-Narasingha.pdf"
-    print("📘 Reading PDF:", PDF_FILE)
-
-    docs = load_pdf_to_docs(PDF_FILE)
-    print("📄 Chunks created:", len(docs))
-
-    print("🧠 Generating embeddings...")
-    texts = [d["text"] for d in docs]
-    embeddings = embed_model.encode(texts, normalize_embeddings=True)
-
-    dim = embeddings.shape[1]
-    new_index = faiss.IndexFlatIP(dim)
-    new_index.add(np.array(embeddings))
-
-    index = new_index
-
-    # Save for quicker next boot
-    save_index(docs, index)
-    print("💾 Index saved for next time!")
+        return    # <-- THIS IS IMPORTANT!
 
 
 # ============================================================
